@@ -6,16 +6,19 @@ const finalLetters = ["C", "H", "E", "Z"];
 
 // CONCAT
 
-const concat = (a, b) => {
-  console.log([...a, ...b]);
-};
+const concat = (a, b) => [...a, ...b];
 
-concat(lettersArray, moreletters);
+const resultConcat = concat(lettersArray, moreletters);
+console.log(resultConcat);
 
 // Optional
-const concatMultiple = (...arrays) => {
-  const result = arrays.reduce((acc, curr) => [...acc, ...curr], []);
-  console.log(result);
-};
+const concatMultiple = (...arrays) =>
+  arrays.reduce((acc, curr) => [...acc, ...curr], []);
 
-concatMultiple(lettersArray, moreletters, lastLetters, finalLetters);
+const resultConcatMultiple = concatMultiple(
+  lettersArray,
+  moreletters,
+  lastLetters,
+  finalLetters
+);
+console.log(resultConcatMultiple);

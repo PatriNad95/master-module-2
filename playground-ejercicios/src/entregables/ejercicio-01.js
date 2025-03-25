@@ -2,31 +2,28 @@ console.log("************** DELIVERABLE 01 *********************");
 const letterArray = ["P", "A", "T", "R", "I"];
 
 // HEAD
-const head = ([first]) =>
-  console.log("Devuelve el primer elemento del array", first);
+const head = ([first]) => first;
 
-head(letterArray);
+const resultHead = head(letterArray);
+console.log("Devuelve el primer elemento del array", resultHead);
 
 // TAIL
 
-const tail = ([_first, ...letters]) =>
-  console.log("Devuelve los elementos del array menos el primero", letters);
+const tail = ([_first, ...letters]) => letters;
 
-tail(letterArray);
+const resultTail = tail(letterArray);
+console.log("Devuelve los elementos del array menos el primero", resultTail);
 
 // INIT
 
-const init = (letters = []) =>
-  console.log(
-    "Devuelve los elementos del array menos el último",
-    letters.slice(0, -1)
-  );
+const init = (letters = []) => letters.slice(0, -1);
 
-init(letterArray);
+const resultInit = init(letterArray);
+console.log("Devuelve los elementos del array menos el último", resultInit);
 
 // LAST
 
-const last = (letters = []) =>
-  console.log("Devuelve el último elemento del array", letters.pop());
+const last = (letters = []) => letters.pop();
 
-last(letterArray);
+const resultLast = last(letterArray);
+console.log("Devuelve el último elemento del array", resultLast);

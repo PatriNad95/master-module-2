@@ -5,12 +5,13 @@ var b = { name: "Luisa", age: 31, married: true };
 function clone(source) {
   return { ...source };
 }
-
-console.log(clone(a));
+const resultClone = clone(a);
+console.log(resultClone);
 
 // Merge
 function merge(source, target) {
   return { ...clone(target), ...clone(source) };
 }
 
-console.log(merge(a, b));
+const resultMerge = merge(a, b);
+console.log(resultMerge);
